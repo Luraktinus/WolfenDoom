@@ -3,15 +3,22 @@
  * Damages all occult enemies within its radius
  */
 
+class HolyWaterEffect : Inventory {
+	Default {
+		Inventory.MaxAmount 1;
+	}
+}
+
 class HolyWaterGrenade : CustomInventory {
 	
-	int Radius;
+	int EffectRadius;
 	int HealthFactor;
 	class<Inventory> EffectItem;
 	Color selfLightColor;
 	Color enemyLightColor;
+	PointLightPulse effectLight;
 
-	property EffectRadius: HolyRadius;
+	property EffectRadius: EffectRadius;
 	property InverseHealthFactor: HealthFactor;
 	property EffectItem: EffectItem;
 	property SelfLightColor: SelfLightColor;
@@ -31,40 +38,22 @@ class HolyWaterGrenade : CustomInventory {
 	States {
 		Spawn:
 			HOLG A 1 NoDelay {
-				PointLightPulse effectLight = new("PointLightPulse");
-				effectLight.args[0] = SelfLightColor.r;
-				effectLight.args[1] = SelfLightColor.g;
-				effectLight.args[2] = SelfLightColor.b;
-				effectLight.args[3] = 16;
-				effectLight.args[4] = 12;
-				effectLight.Angle = 70.0;
+				invoker.effectLight = PointLightPulse(Spawn("PointLightPulse", pos));
+				invoker.effectLight.args[0] = invoker.selfLightColor.r;
+				invoker.effectLight.args[1] = invoker.selfLightColor.g;
+				invoker.effectLight.args[2] = invoker.selfLightColor.b;
+				invoker.effectLight.args[3] = 16;
+				invoker.effectLight.args[4] = 12;
+				invoker.effectLight.Angle = 70.0;
 			}
 			HOLG A -1 {
 				A_Gravity();
-				Actor enemy = RoughMonsterSearch(HolyRadius);
-				if (enemy) {
-					if (ShouldAffect(enemy)) {
-						if (ShouldDamage(enemy)) {
-							enemy.health = enemy.health / HealthFactor;
-							PointLightPulse enemyEffectLight = new("PointLightPulse");
-							enemyEffectLight.args[0] = EnemyLightColor.r;
-							enemyEffectLight.args[1] = EnemyLightColor.g;
-							enemyEffectLight.args[2] = EnemyLightColor.b;
-							enemyEffectLight.args[3] = enemy.radius * 2;
-							enemyEffectLight.args[4] = enemy.radius;
-							enemyEffectLight.Angle = 70.0;
-							enemyEffectLight.target = enemy; // Makes light follow enemy
-							enemy.GiveInventoryType(EffectItem);
-						}
-						effectLight.Args[3] = EffectRadius;
-						effectLight.Args[4] = EffectRadius / 2;
-					}
-				}
+				A_RadiusHolyEffect();
 			}
 			Stop;
 		Pickup:
 			HOLG A 0 {
-				effectLight.Destroy();
+				invoker.effectLight.Destroy();
 			}
 			Stop;
 		Use:
@@ -72,6 +61,28 @@ class HolyWaterGrenade : CustomInventory {
 			Stop;
 	}
 
+	action void A_RadiusHolyEffect() {
+		Actor enemy = invoker.RoughMonsterSearch(invoker.EffectRadius);
+		if (enemy) {
+			if (invoker.ShouldAffect(enemy)) {
+				if (invoker.ShouldDamage(enemy)) {
+					enemy.health = enemy.health / invoker.HealthFactor;
+					PointLightPulse enemyEffectLight = PointLightPulse(Spawn("PointLightPulse", enemy.pos));
+					enemyEffectLight.args[0] = invoker.EnemyLightColor.r;
+					enemyEffectLight.args[1] = invoker.EnemyLightColor.g;
+					enemyEffectLight.args[2] = invoker.EnemyLightColor.b;
+					enemyEffectLight.args[3] = enemy.radius * 2;
+					enemyEffectLight.args[4] = enemy.radius;
+					enemyEffectLight.Angle = 70.0;
+					enemyEffectLight.target = enemy; // Makes light follow enemy
+					enemy.GiveInventoryType(invoker.EffectItem);
+				}
+				invoker.effectLight.Args[3] = invoker.EffectRadius;
+				invoker.effectLight.Args[4] = invoker.EffectRadius / 2;
+			}
+		}
+	}
+	
 	/*
 	 * Checks whether the actor is affected by holy water
 	 * 
