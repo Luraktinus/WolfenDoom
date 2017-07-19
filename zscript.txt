@@ -34,6 +34,7 @@ version "2.5"
 
 /// Inventory
 #include "scripts/actors/items/money.txt"			// Money (can be made dormant to prevent player from picking it up)
+#include "scripts/actors/items/holywater.txt"		// Holy water grenade
 
 /// Shaders
 #include "scripts/shaders/underwater.txt"			// Underwater

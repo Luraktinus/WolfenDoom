@@ -476,6 +476,7 @@ TAGFELDK = "Field Kit";
 TAGFILES = "Secret Files";
 TAGFRAGN = "Frag Grenade";
 TAGGAUGE = "12 Gauge";
+TAGHOLYW = "Holy Water Grenade";
 TAGKARTE = "Kennkarte";
 TAGKNIFE = "Combat Knife";
 TAGKTURR = "Usable Turret";

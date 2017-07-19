@@ -1,0 +1,105 @@
+/*
+ * Holy water grenade
+ * Damages all occult enemies within its radius
+ */
+
+class HolyWaterGrenade : CustomInventory {
+	
+	int Radius;
+	int HealthFactor;
+	class<Inventory> EffectItem;
+	Color selfLightColor;
+	Color enemyLightColor;
+
+	property EffectRadius: HolyRadius;
+	property InverseHealthFactor: HealthFactor;
+	property EffectItem: EffectItem;
+	property SelfLightColor: SelfLightColor;
+	property EnemyLightColor: EnemyLightColor;
+
+	Default {
+		HolyWaterGrenade.EffectRadius 512;
+		HolyWaterGrenade.InverseHealthFactor 2;
+		HolyWaterGrenade.EffectItem "HolyWaterEffect";
+		HolyWaterGrenade.SelfLightColor "#66c1ff";
+		HolyWaterGrenade.EnemyLightColor "#66c1ff";
+		Inventory.Icon "I_HOLWGR";
+		Tag "$TAGHOLYW";
+		Speed 60;
+		+INVENTORY.INVBAR;
+	}
+	States {
+		Spawn:
+			HOLG A 1 NoDelay {
+				PointLightPulse effectLight = new("PointLightPulse");
+				effectLight.args[0] = SelfLightColor.r;
+				effectLight.args[1] = SelfLightColor.g;
+				effectLight.args[2] = SelfLightColor.b;
+				effectLight.args[3] = 16;
+				effectLight.args[4] = 12;
+				effectLight.Angle = 70.0;
+			}
+			HOLG A -1 {
+				A_Gravity();
+				Actor enemy = RoughMonsterSearch(HolyRadius);
+				if (enemy) {
+					if (ShouldAffect(enemy)) {
+						if (ShouldDamage(enemy)) {
+							enemy.health = enemy.health / HealthFactor;
+							PointLightPulse enemyEffectLight = new("PointLightPulse");
+							enemyEffectLight.args[0] = EnemyLightColor.r;
+							enemyEffectLight.args[1] = EnemyLightColor.g;
+							enemyEffectLight.args[2] = EnemyLightColor.b;
+							enemyEffectLight.args[3] = enemy.radius * 2;
+							enemyEffectLight.args[4] = enemy.radius;
+							enemyEffectLight.Angle = 70.0;
+							enemyEffectLight.target = enemy; // Makes light follow enemy
+							enemy.GiveInventoryType(EffectItem);
+						}
+						effectLight.Args[3] = EffectRadius;
+						effectLight.Args[4] = EffectRadius / 2;
+					}
+				}
+			}
+			Stop;
+		Pickup:
+			HOLG A 0 {
+				effectLight.Destroy();
+			}
+			Stop;
+		Use:
+			TNT1 A 0 A_FireCustomMissile("HolyWaterGrenade");
+			Stop;
+	}
+
+	/*
+	 * Checks whether the actor is affected by holy water
+	 * 
+	 * By default, this affects non-boss occult monsters.
+	 * @param actor The actor to check
+	 */
+	bool ShouldAffect (Actor actor) {
+		if (actor.bBoss) return false;
+		if (actor is "BloodSkull" ||
+			actor is "WereWaffenSS" ||
+			actor is "Geist" ||
+			actor is "UndeadMonk") {
+			return true;
+		}
+		return false;
+	}
+	
+	/*
+	 * Checks whether the holy water grenade should damage the actor.
+	 * 
+	 * By default, this checks whether the target actor has the EffectItem
+	 * in their inventory.
+	 * @param actor The actor to check
+	 */
+	bool ShouldDamage (Actor actor) {
+		if (actor.CheckInventory(EffectItem, 1)) {
+			return false;
+		}
+		return true;
+	}
+}
