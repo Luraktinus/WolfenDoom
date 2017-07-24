@@ -32,8 +32,7 @@ gameinfo
 	borderflat = "textures/cncr_g29.jpg"
 
 	defaultconversationmenuclass = "BoAConversationMenu"
-	eventhandlers = "BoAEventHandler"
-	AddEventHandlers = "WaterHandler"
+	eventhandlers = "BoAEventHandler", "WaterHandler", "CustomShaderHandler"
 	statusbarclass = "BoAStatusBar"
 }
 
@@ -898,6 +897,10 @@ DoomEdNums
 	17217=Camp_LyingBodies
 	17218=Camp_PrisonerGuts
 	17219=Camp_PrisonerSamples
+	17220=Camp_RandomPileBones
+	17221=Camp_MoundOfBodies
+	17222=Camp_StaticSit
+	17223=Camp_PrisonerHang
 	17500=BOD_GlassShardActivatable
 	18910=ZombieKazi
 	18911=ZombieBrain
@@ -1415,6 +1418,12 @@ DoomEdNums
 	32014=TMBlazko2
 	32015=FuelDrumAstro
 	32016=KTurretStand
+	32017=TMFanfare1
+	32018=TMFanfare2
+	32019=TMFanfare3
+	32020=TMHitler
+	32021=TMTankPanzer3
+	32022=TMGauleiter
 	32767=SmokeMonster
 }
 
