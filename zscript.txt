@@ -1,4 +1,4 @@
-version "2.5"
+version "3.3"
 
 // Menu Components
 #include "scripts/menus/iconlistmenu.txt"						// Skill Menu (with icons) Base
@@ -27,6 +27,7 @@ version "2.5"
 
 /// Interactive Props
 #include "scripts/actors/breakablevent.txt"			// Breakable Vent (blocking, walkable)
+#include "scripts/actors/walldeco.txt"				// Talon1024 - Wall decorations (prisoners)
 
 /// Decorative Props
 #include "scripts/actors/truckwindows.txt"

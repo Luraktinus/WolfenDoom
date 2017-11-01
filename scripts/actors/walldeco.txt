@@ -1,0 +1,38 @@
+struct Line {
+	double A;
+	double B;
+	double C;
+	double D;
+}
+
+class WallDecoBase : Actor
+{
+	int internalLength;
+	property Length: internalLength;
+
+	Default
+	{
+		Radius 48;
+		Height 64;
+		WallDecoBase.Length 16;
+		+FIXMAPTHINGPOS;
+		+NOGRAVITY;
+		+WALLSPRITE;
+		+SHOOTABLE;
+		+NOTAUTOAIMED;
+	}
+	States
+	{
+	Spawn:
+		TNT1 A -1;
+		Stop;
+	}
+
+	// TODO: Thin rectangular prism collision
+	override bool CanCollideWith(Actor other, bool passive) {
+		if (!other) return false;
+		
+		return (Distance2D(other) <= other.radius);
+		return true;
+	}
+}
