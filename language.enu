@@ -42,30 +42,30 @@ TXT_HAVEENOUGH      = "\cCYou don't need it!";
 TXT_GOAWAY          = "\cCGo away!";
 
 // Standardizing capitalization in engine messages (they were all lowercase previously)
+DOSY = "(Press Y to quit)";
+ENDGAME = "Are you sure you want to end the game?\n\nPress Y or N.";
+GGSAVED = "Game saved.";
+LOADNET = "You can't load while in a net game!\n\nPress a key.";
+NETEND = "You can't end a netgame!\n\nPress a key.";
+NEWGAME = "You can't start a new game\nwhile in a network game.\n\nPress a key.";
 PRESSKEY = "Press a key.";
 PRESSYN = "Press Y or N.";
-LOADNET = "You can't load while in a net game!\n\nPress a key.";
 QLOADNET = "You can't quickload during a netgame!\n\nPress a key.";
-QSAVESPOT = "You haven't picked a quicksave slot yet!\n\nPress a key.";
-SAVEDEAD = "You can't save if you aren't playing!\n\nPress a key.";
-QSPROMPT = "Quicksave over your game named\n\n'%s'?\n\nPress Y or N.";
 QLPROMPT = "Do you want to quickload the game named\n\n'%s'?\n\nPress Y or N.";
-NEWGAME = "You can't start a new game\nwhile in a network game.\n\nPress a key.";
-NETEND = "You can't end a netgame!\n\nPress a key.";
-ENDGAME = "Are you sure you want to end the game?\n\nPress Y or N.";
-DOSY = "(Press Y to quit)";
-GGSAVED = "Game saved.";
+QSAVESPOT = "You haven't picked a quicksave slot yet!\n\nPress a key.";
+QSPROMPT = "Quicksave over your game named\n\n'%s'?\n\nPress Y or N.";
 SAFEMESSAGE = "\cgDo you really want to do this?";
+SAVEDEAD = "You can't save if you aren't playing!\n\nPress a key.";
 
 //cheats
-STSTR_DQDON = "Inglorious Mode ON";
-STSTR_DQDOFF = "Inglorious Mode OFF";
-STSTR_KFAADDED = "Thank you for cheating.";
-STSTR_FAADDED = "What, you needed ammo?";
-STSTR_NCON = "Geist mode ON";
-STSTR_NCOFF = "Geist mode OFF";
 STSTR_BEHOLDX = "Goodies dispensed.";
 STSTR_CHOPPERS = "This cheat really doesn't do anything now";
+STSTR_DQDOFF = "Inglorious Mode OFF";
+STSTR_DQDON = "Inglorious Mode ON";
+STSTR_FAADDED = "What, you needed ammo?";
+STSTR_KFAADDED = "Thank you for cheating.";
+STSTR_NCOFF = "Geist mode OFF";
+STSTR_NCON = "Geist mode ON";
 TXT_DEFAULTPICKUPMSG = "If you see this message, let Torm know what you were doing when it showed up";
 
 //mission objectives
@@ -187,11 +187,11 @@ MO_C3M3_S1 = "Find and open the supply chest\n";
 
 //keys
 GOTBLUEKEY = "Picked up a blue key.";
-GOTYELLOWKEY = "Picked up a yellow key.";
-GOTREDKEY = "Picked up a red key.";
+GOTCYANKEY = "Picked up a cyan key.";
 GOTGREENKEY = "Picked up a green key.";
 GOTPURPLEKEY = "Picked up a purple key.";
-GOTCYANKEY = "Picked up a cyan key.";
+GOTREDKEY = "Picked up a red key.";
+GOTYELLOWKEY = "Picked up a yellow key.";
 
 PD_BLUEC = "You need a blue key to open this door";
 PD_BLUECO = "You need a blue key to activate this object";
@@ -395,6 +395,7 @@ MUTANT = "%o did the dance of doom with a Mutant.";
 NAZISHIP = "%o received death from above.";
 NAZOBITE = "%o was chewed by a Zombie brain eater.";
 NAZOKAZI = "%o was killed by a NaziKazi zombie.";
+NAZOPRIS = "%o has been bitten by a Prisoner zombie.";
 OFFICER = "%o was executed by an officer.";
 OTTOBOSS = "%o was splattered by Otto Giftmacher.";
 PARATROP = "%o was slaughtered by a Fallschirmjaeger.";
@@ -432,6 +433,7 @@ WMPGUARD = "%o was plugged by a trigger-happy Wehrmacht.";
 WOFFICER = "%o was quickly executed by an officer.";
 WRIFSOLD = "%o was snap-shot by a rifle soldier.";
 ZGENERAL = "%o was creepily killed by undead Fettgesicht.";
+ZZYKLON = "%o was intoxicated to the bones by Zyklonstein.";
 
 //Commander Keen miscellanea
 CKCANDY = "Picked up a Shikkers Candy Bar.";
@@ -521,6 +523,7 @@ OBGASBTL = "%o was intoxicated by a gas bottle.";
 OBMINE = "%o touched a mine.";
 OBDMINE = "%o touched a deployable mine.";
 OBSPIKES = "%o was impaled by Tutanchamun's toothpicks."
+OBZYKF = "%o was intoxicated by %k.";
 
 //Map names
 TITLEMAP = "WolfenDoom: Blade of Agony";
@@ -1009,6 +1012,10 @@ PROTOTYPECONV07 = "\cGYou don't have that cartridge";
 KRAUTSKILLER01 = "\cCKill ";
 KRAUTSKILLER02 = "\cC more Kraut(s) in wave ";
 
+ZOMBIKILLER01 = "\cC";
+ZOMBIKILLER02 = "\cC undead killed in level ";
+ZOMBIKILLER03 = "\cC wave ";
+
 BRIDGECOUNT01 = "\cC seconds left";
 POISONCOUNT01 = "\cCYou have ";
 POISONCOUNT02 = "\cC left";
@@ -1053,8 +1060,8 @@ MARINEAFTERDOUGLESCONV09 = "\cQSgt. Ascher\n\cPCpt. \cC, whatever you have blown
 MARINEAFTERDOUGLESCONV10 = "\cQSgt. Ascher\n\cPCpt. \cC, it was him, \cRTotengräber\cC himself! He got away, but keep your eyes open for this coward. I am pretty sure that he will prepare a trap for you somewhere next time. And make sure to grab useful equipment down here if you find anything.";
 MARINEAFTERDOUGLESCONV11 = "\cQSgt. Ascher\n\cPCpt. \cC, whatever this is, it doesn't look very good. The dashboards seem to be a clue for what the supernatural powers of the \cFStaff\cC is capable of... what are the Nazis doing? Reviving their fallen from death? Turning prisoners into some kind of weapon?...";
 
-
-BJMESSAGE01 = "\cPWilliam Blazkowicz\n\cCLocked -- the doorlock looks rusty, if I just had something to break it.";
+BJMESSAGE01 = "\cPWilliam Blazkowicz\n\cCIt's locked -- the padlock looks rusty, though. If only I had something to break it with...";
+BJMESSAGE02 = "\cPWilliam Blazkowicz\n\cCI need another skull key to open that door. Maybe there's one lying around in this section of the catacombs?"; // C1M5
 
 GENERALMCONV01 = "\cQGen. John H. Miller";
 GENERALMCONV02 = "\cCWelcome back, \cPCpt. Blazkowicz\cC. We're prepared to commence our next operation. Are you ready to answer the call of duty?";
@@ -1094,13 +1101,15 @@ ASCHERCONV08 = "\cCSir, you may already have noticed, but different types of \cR
 ASCHERCONV09 = "\cCSir, be careful when you're fighting through the \cRStahlhimmel\cC facility. Intelligence has reports about an \cRelite infantry division\cC assigned to guard the \cRNazis\cC' most important assets. According to the intelligence reports, they're quick, tough, and they can throw grenades at you. However, they can be easily distinguished from other troops by their gas masks and long coats. Be careful when you happen to be up against these guys on the field."; // C2M5
 ASCHERCONV10 = "\cCSir, we've heard rumors of a completely new Nazi infantry division, trained specifically to operate in the harsh cold environments of \cBNorway\cC and the \cBArctic Circle\cC. You may be up against these guys in the field on this mission."; // C2M6
 ASCHERCONV11 = "\cQSgt. Ascher\n\cCOkay then, \cPCaptain\cC! We've already cleared the area, so you check inside for any remaining forces. Oh, and grab some equipment before you proceed with \cQCpt. Blake\cC!";
-ASCHERCONV12 = "\cCI am glad to see you \cPCaptain\cC... though I am still shocked about the horrors you discovered, glad that your undercover mission went as it was planned by the hq.\n\n\cCWhen we prepared the mission details, our dury was to free the prisoners, but after knowing what you discovered, we have a much more complicated situation here.";
-ASCHERCONV13 = "\cCWithout any doubt, we need to get as many camp prisoners out of this hell as possible - and as soon as possible. I have already contacted the HQ for reinforcements. The chaos you have created is enough to draw most of the attention to the west gate of the camp area, where our troops are arriving - they will make short work with the remaining Krauts. ";
-ASCHERCONV14 = "\cCAccording to the files, boards and prints you have discovered at the camp headquarter, the crematorium administration and the prison cellars, this place is much more than only usual concentration camp.\n\n\cCWe will need to decipher the files you've found for exact details but you don't need to be called Albert Einstein to combine facts:\n\n\cCThe Zyklon B gas used by the extermination here is some kind of a biochemical weapon that has been improved somehow ... the \cFSpear of Destiny\cC seems to take a role here as well. It seems to be much stronger and more dangerous than the usual crap, and maybe it can even do more than only kill you... but this is something for \cQGutenberg\cC to check, he is the brain, we are the hands.\n\n\cCOur goal is a different one, as we need to cut off the snake's head now - \cRGeneral Totengräber\cC.";
+ASCHERCONV12 = "\cCOh, thank God you made it, \cPCaptain\cC! Despite the horrific experiments you found under the camp, I'm glad you were able to do what you had to do.\n\n\cCI'll be blunt, \cPCaptain\cC. We were not expecting anything like this when we analyzed the Intel reports about this place. But now, it's clear that there is more to \cRHitler\cC's Final Solution than meets the eye.";
+ASCHERCONV13 = "\cCWe need to get as many of the prisoners out of this hellhole as soon as possible. I already messaged HQ for reinforcements. You did a great job with that distraction of yours at the west end of the camp. Once our reinforcements arrive, they will make short work of the remaining Krauts.";
+//ASCHERCONV14 = "\cCAccording to the files, boards and prints you have discovered at the camp headquarter, the crematorium administration and the prison cellars, this place is much more than only usual concentration camp.\n\n\cCWe will need to decipher the files you've found for exact details but you don't need to be called Albert Einstein to combine facts:\n\n\cCThe Zyklon B gas used by the extermination here is some kind of a biochemical weapon that has been improved somehow ... the \cFSpear of Destiny\cC seems to take a role here as well. It seems to be much stronger and more dangerous than the usual crap, and maybe it can even do more than only kill you... but this is something for \cQGutenberg\cC to check, he is the brain, we are the hands.\n\n\cCOur goal is a different one, as we need to cut off the snake's head now - \cRGeneral Totengräber\cC.";
+ASCHERCONV14 = "\cCAccording to the files, diagrams and prints you discovered at the camp headquarters, the crematorium administration and the prison cellars, this place is much more than just a concentration camp.\n\n\cCWe will need to decipher the files you found for exact details, but it doesn't take Albert Einstein to solve this puzzle:\n\n\cCThe Zyklon B gas used to kill the prisoners is some kind of biochemical weapon that has been modified somehow... the \cFSpear of Destiny\cC seems to take a role here as well. It seems to be much stronger and more dangerous than the usual crap, and maybe it can even do more than only kill you... but this is something for \cQGutenberg\cC to check, he is the brain, we are the hands.\n\n\cCOur goal is a different one, as we need to cut off the snake's head now - \cRGeneral Totengräber\cC.";
 ASCHERCONV15 = "\cCPrisoners and the concentration camp";
 ASCHERCONV16 = "\cCZyklon B and the Spear";
 ASCHERCONV17 = "\cCGeneral Totengräber";
-ASCHERCONV18 = "\cCYes, you have already encountered him at the underground area of the camp administration. \cRGeneral Totengräber\cC is the sick head of the SS and the extermination program, and he is a fucking coward - excuses for my words. You almost had him down at the garbage cellar, but don't give up: If we get him, we cut off the SS' head by one hit.\n\n\cCTime to hunt him down on his own playground now, and by chance, gather as much information about the Zyklon B as possible... and destroy what you can't carry. Good luck \cPCaptain\cC.";
+//ASCHERCONV18 = "\cCYes, you have already encountered him at the underground area of the camp administration. \cRGeneral Totengräber\cC is the sick head of the SS and the extermination program, and he is a fucking coward - excuses for my words. You almost had him down at the garbage cellar, but don't give up: If we get him, we cut off the SS' head by one hit.\n\n\cCTime to hunt him down on his own playground now, and by chance, gather as much information about the Zyklon B as possible... and destroy what you can't carry. Good luck \cPCaptain\cC.";
+ASCHERCONV18 = "\cRGeneral Totengräber\cC is the one you fought in the basement - and almost killed! But, of course, he had to run away from you, that cowardly son of a--\n\nAnyway, he is the head of the SS, and the manager of the gas chamber program. If you kill him, you'll cut off the SS' head, and that's not all. Hopefully, you can find out more about that Zyklon B stuff.";
 ASCHERCONV19 = "\cCCan you start again from the beginning?";
 
 TALKINGTOILETCONV01 = "\cJToilet";
@@ -1137,7 +1146,7 @@ DOORCONV01 = "\cQNotification";
 DOORCONV02 = "\cCThis door can't be opened, as indicated by its grey color. The appearance of doors will help you explore the maps by distinguishing areas worth being investigated from less important areas, which are simply not accessible. \n\n\cCFor instance, \cUgrey\cC wood doors or metal doors with \cUlittle locks\cC can't be accessed at all. On the other hand, \cEbrown\cC wood doors, or light grey metal doors, can always be opened. However, locked doors with a colored knob require the appropriate keys. Keeping this information in mind will save you a lot of time and frustration during your missions!";
 
 CAMPPRISCONV01 = "\cQItzhak Stern";
-CAMPPRISCONV02 = "\cCEh... who are you and how did you come down here? You are in a bad condition, the Nazis beat you up quite well... I guess they wouldn't treat a snooper of their own in such a way so you won't be a treat for our last hope for escape.\n\n\cCDid you arrive with the new fated to death? Didn't see you here before boy...";
+CAMPPRISCONV02 = "\cCHuh?... who are you, and how did you come down here? You don't look too good. The Nazis beat you up pretty good... I guess they wouldn't treat a snooper of their own in such a way so you won't be a treat for our last hope for escape.\n\n\cCDid you arrive with the other prisoners? I haven't see you here before, boy...";
 CAMPPRISCONV03 = "\cCI am William Blazkowicz";
 CAMPPRISCONV04 = "\cCYou must be kidding... do you really think you can make it out of this alive? Don't you think we already try to find a way now for months? We collect anything that might be of good use to us for an insurrection, scattered hidden around the whole camp - \cFbushes\cC, \cFbeds\cC... we knew we can't make it through the main gates but one of our fellow sufferers, Poldek Pfefferberg, was able to copy the \cFkey\cC to the back entrance... the SS took him 3 nights ago, I think he is dead, he got the key with him... \n\nBut now that \cRHitler\cC has ordered the <<final solution>>, we can't waste any more time... do you know what this means? If we don't make it out of this, we are dead. All of us. We are digging with our last power, we are fatigue, we are desperate...\n\n\cCIf you want to help us, grab the shovel and kill all of the Krauts and their leader -- the one all of them only call \cRTotengräber\cC... or simply start digging with us for the dead...";
 CAMPPRISCONV05 = "\cCI go for the living";
@@ -1173,13 +1182,14 @@ BARKEEPERLIVEANSWER02 = "\cCCan you repeat that?";
 
 BARKEEPERMESSAGE01 = "\cEJuliette\n\cCBonsoir, mon ami. I knew my secret mechanism wouldn't fool you; Bon travail! But, you must hurry. Take this key, and get ready to defuse the bombs on the main bridge! \cQMe\cC and \cQDouglas\cC will keep you up to date on the situation. Allez maintenant, vite!";
 BARKEEPERMESSAGE02 = "\cEJuliette\n\cCWhat are you doing, mon ami? Hurry up and defuse the bombs on the main bridge!";
-BARKEEPERMESSAGE07 = "\cEJuliette\n\cCAll right, mon ami. Clear out the plaza and any other buildings you can get in to. There must be another way into the catacombs.";
-BARKEEPERMESSAGE10 = "\cEJuliette\n\cCTres bien, mon ami! \cBParis\cC is ours again, and ze \cRNazis\cC are retreating. As soon as we get back to HQ, I'll pour \cPyou\cC and \cQDouglas\cC a glass of my finest wine, oui? Hehe, you deserve it.";
-
-BARKEEPERMESSAGE03 = "\cEJuliette\n\cCYou found a dig site? Bon travail, mon ami! Go down there and investigate, but stay alert for monsters.";
+BARKEEPERMESSAGE03 = "\cEJuliette\n\cCWhat are you doing, mon ami? Go grab one of those machine guns on the streets, and hold the \cFNebelwerfer\cC!";
 BARKEEPERMESSAGE04 = "\cEJuliette\n\cCBon travail! Now, find a way out of there, and bring that skull key back to my hideout.";
 BARKEEPERMESSAGE05 = "\cEJuliette\n\cCOkay. See the skull key slot, mon ami? The \cBParis catacombs\cC are behind that door. Watch your step; the catacombs are filled with \cRnasty critters\cC like \cRbats\cC and \cRrats\cC. Stay alert, and keep your weapons ready.";
-BARKEEPERMESSAGE06 = "\cEJuliette\n\cCAnother skull key? Is there another skull key slot around, mon ami?";
+BARKEEPERMESSAGE06 = "#UNUSED#";
+BARKEEPERMESSAGE07 = "\cEJuliette\n\cCKeep clearing out the plaza and any other buildings you can get in to. There must be another way into the catacombs.";
+BARKEEPERMESSAGE08 = "\cEJuliette\n\cCKeep searching the catacombs, mon ami. Look for an entrance into the casino. Once you've found your way out of one of there, you should be able to finish clearing out the bank and museum.";
+BARKEEPERMESSAGE09 = "\cEJuliette\n\cCBon travail le cherche du disc soleil, mon ami! Keep it with you, mon ami, and keep searching for a way into the casino. Maybe you'll find the other half in one of those buildings, non?"; // After finding solar disc
+BARKEEPERMESSAGE10 = "\cEJuliette\n\cCTres bien, mon ami! \cBParis\cC is ours again, and the \cRNazis\cC are retreating. As soon as we get back to HQ, I'll pour \cPyou\cC and \cQDouglas\cC a glass of my finest wine, oui? Hehe, you deserve it.";
 
 BARRANDICONV01 = "\cQLt. Randi Heit";
 BARRANDICONV02 = "\cCWelcome back, sir, can I \cU*hic*\cC ...serve you anything? Or perhaps regale you ... \cU*hic*\cC with a fascinating story, from the multitude of interesting experiences I ... \cU*hic*\cC ...had during my time at sea?";

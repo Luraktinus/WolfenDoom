@@ -114,6 +114,30 @@ ACTOR SkyboxEarth : SkyboxMoon
 	}
 }
 
+ACTOR SkyboxStars : SkyboxMoon
+{
+	//$Title Stars (skybox)
+	RenderStyle "Add"
+	States
+	{
+	Spawn:
+		MDLA A -1
+		Stop
+	}
+}
+
+Actor SkyboxDayNight : SkyboxMoon
+{
+	//$Title Sun & Moon (skybox)
+	RenderStyle "Add"
+	States
+	{
+	Spawn:
+		MDLA A -1
+		Stop
+	}
+}
+
 ACTOR SkyboxPlanetShade : 3dGlass //shades of darkness - ozy81, adjusted by T667
 {
 	RenderStyle "Shaded"
@@ -145,7 +169,7 @@ ACTOR SkyboxMoonLights : SkyboxPlanetShade //adjusted by T667
 }
 
 //Ozy models from scratch or highly revamped
-ACTOR Radiator
+ACTOR Radiator //3d Model by Talon1024, just reworked skin and a couple of details
 {
 	//$Category Models (Wolf3D)/Furniture
 	//$Title Radiator
@@ -415,7 +439,7 @@ ACTOR WaterTower001 : ModelBase
 ACTOR Windmill : 3dObstacle
 {
 	//$Category Models (Wolf3D)/Scenery
-	//$Title Windmill
+	//$Title Windmill (don't scale it more than 1.2!)
 	//$Color 3
 	DistanceCheck "scenelod"
 	Radius 64
@@ -423,7 +447,7 @@ ACTOR Windmill : 3dObstacle
 	{
 	Spawn:
 		MDLA A 0 NoDelay A_PlaySound("misc/windmill", CHAN_AUTO, 0.7, TRUE)
-		MDLA A -1 A_SpawnItemEx("WindmillWheel", 24, 0, ScaleY*476) //don't scale the model more than 1.2 on GZDB
+		MDLA A -1 A_SpawnItemEx("WindmillWheel", 24, 0, ScaleY*476)
 		Stop
 	}
 }
@@ -517,12 +541,11 @@ ACTOR 88mmFlakDestroyed : ModelBase
 	Height 80
 }
 
-ACTOR Nebelwerfer3D : Base
+ACTOR Nebelwerfer3D : Base //Never Distancheck on this! - Ozy81
 {
 	//$Category Models (Wolf3D)/Mission
 	//$Title Nebelwerfer
 	//$Color 3
-	//This mustn't have any DistanceCheck because it is a peculiar mission actor - ozy81
 	Tag "Nebelwerfer"
 	Radius 32
 	Height 56
@@ -554,7 +577,7 @@ ACTOR Nebelwerfer3D : Base
 
 ACTOR Nebelwerfer3D_Destroyed
 {
-	DistanceCheck "scenelod" //this one can have it instead - ozy81
+	DistanceCheck "scenelod"
 	Radius 32
 	Height 56
 	Health -1
@@ -633,14 +656,13 @@ ACTOR Cruiser : ModelBase
 	Height 4
 }
 
-ACTOR FlakVierling3D : SwitchableDecoration
+ACTOR FlakVierling3D : SwitchableDecoration //Never Distancecheck on this! - Ozy81
 {
 	//$Category Models (Wolf3D)/Mission
 	//$Title Flak Vierling
 	//$Color 3
 	//$Arg0 "Type"
 	//$Arg0Tooltip "Pickup the desired type\nSolid: 0\nNon-Solid: 1"
-	//This mustn't have any DistanceCheck because it is a peculiar mission actor - ozy81
 	Radius 80
 	Height 88
 	Health -1
@@ -1228,7 +1250,7 @@ ACTOR WallLight1 : ModelBase
 
 ACTOR WallLight1Lit : WallLight1
 {
-	//$Title Wall Light (on, static))
+	//$Title Wall Light (on, static)
 	DistanceCheck "scenelod"
 	States
 	{
@@ -1241,7 +1263,7 @@ ACTOR WallLight1Lit : WallLight1
 
 ACTOR WallLight1NoCone : WallLight1
 {
-	//$Title Wall Light (on & no cone light, static))
+	//$Title Wall Light (on & no cone light, static)
 	DistanceCheck "scenelod"
 	States
 	{
@@ -1266,7 +1288,7 @@ ACTOR WallLight2 : ModelBase
 
 ACTOR WallLight2Lit : WallLight2
 {
-	//$Title Wall Lantern (on, static))
+	//$Title Wall Lantern (on, static)
 	DistanceCheck "scenelod"
 	States
 	{
@@ -1316,7 +1338,7 @@ ACTOR SimpleLight1 : SwitchableDecoration
 
 ACTOR SimpleLight1Lit : SimpleLight1
 {
-	//$Title Simple Light (on, Set DORMANT & activate it via ACS))
+	//$Title Simple Light (on, Set DORMANT & activate it via ACS)
 	DistanceCheck "scenelod"
 	States
 	{
@@ -1340,7 +1362,7 @@ ACTOR SimpleLight1Lit : SimpleLight1
 ACTOR IntermapSkylight : 3dObstacle
 {
 	//$Category Models (Wolf3D)/Intermap
-	//$Title INTERMAP Skylight
+	//$Title Headquarters Skylight
 	//$Color 3
 	Radius 64
 	Height 16
@@ -1349,7 +1371,7 @@ ACTOR IntermapSkylight : 3dObstacle
 
 ACTOR LighthouseBeam : IntermapSkylight
 {
-	//$Title Lighthouse Beam)
+	//$Title Lighthouse Beam
 	DistanceCheck "scenelod"
 	RenderStyle "Add"
 	+BRIGHT
@@ -1365,7 +1387,7 @@ ACTOR FuelDrum : 3dObstacle
 {
 	//$Category Models (Wolf3D)/Obstacles
 	//$Title Fuel Drum
-	//$Color 3)
+	//$Color 3
 	DistanceCheck "scenelod"
 	Radius 16
 	Height 42
@@ -1375,7 +1397,7 @@ ACTOR GasDrum : 3dObstacle
 {
 	//$Category Models (Wolf3D)/Obstacles
 	//$Title Gas Drum
-	//$Color 3)
+	//$Color 3
 	DistanceCheck "scenelod"
 	Radius 16
 	Height 42
@@ -1385,7 +1407,7 @@ ACTOR FuelDrumAstro //Uses JK2 3dModel
 {
 	//$Category Models (Wolf3D)/Obstacles
 	//$Title Fuel Drum (Astrostein, pushable)
-	//$Color 3)
+	//$Color 3
 	DistanceCheck "scenelod"
 	-NOGRAVITY 			//or it will move towards the void without falling
 	+CANPASS
@@ -1419,7 +1441,7 @@ ACTOR FuelDrumAstro //Uses JK2 3dModel
 
 ACTOR MovableCrate1 : FuelDrumAstro
 {
-	//$Title Movable Crate (paper, 64))
+	//$Title Movable Crate (paper, 64)
 	DistanceCheck "scenelod"
 	Radius 32
 	Height 64
@@ -1445,7 +1467,7 @@ ACTOR Tie_Fighter : 3dObstacle //ozy81
 {
 	//$Category Models (Wolf3D)/Astrostein/Easteregg
 	//$Title Tie Fighter
-	//$Color 3)
+	//$Color 3
 	DistanceCheck "scenelod"
 	Radius 48
 	Height 192
@@ -1754,6 +1776,18 @@ ACTOR 3dPrometheus_R: 3dPrometheus_L
 }
 
 //TF3DM / 3dRegenerator Models
+ACTOR ParkBench : RTCWBench
+{
+	//$Title Park / City Street Bench A
+	DistanceCheck "scenelod"
+}
+
+ACTOR ParkBench2 : RTCWBench
+{
+	//$Title Park / City Street Bench B
+	DistanceCheck "scenelod"
+}
+
 ACTOR ArtDeco_WLight1 : SwitchableDecoration
 {
 	//$Category Light Sources (Wolf3D)/ACS Switchable
@@ -1789,7 +1823,7 @@ ACTOR Female_StatueA : Caesar
 
 ACTOR Female_StatueB : Female_StatueA
 {
-	//$Title Female Statue (left side))
+	//$Title Female Statue (left side)
 	DistanceCheck "scenelod"
 }
 
@@ -1939,6 +1973,133 @@ ACTOR Feldfernschreiber : ModelBase
 }
 
 //CODs Stuff - Ozy81
+ACTOR COD_ArtDecoLight1A : SwitchableDecoration
+{
+	//$Category Light Sources (Wolf3D)/ACS Switchable
+	//$Title Art Deco Ceiling Light (OFF, Set DORMANT & activate it via ACS)
+	//$Color 11
+	DistanceCheck "scenelod"
+	Radius 8
+	Height 0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Active:
+		MDLA A 0 A_ChangeFlag("DORMANT", FALSE)
+	Spawn:
+		MDLA A 0 NoDelay
+	Activate:
+		MDLA A -1
+		Loop
+	Inactive:
+		MDLA A 0 A_ChangeFlag("DORMANT", TRUE)
+		MDLA B -1 LIGHT(OZYSIMLT)
+		Stop
+	}
+}
+
+ACTOR COD_ArtDecoLight1B : COD_ArtDecoLight1A
+{
+	//$Title Art Deco Ceiling Light (ON, Set DORMANT & activate it via ACS)
+	States
+	{
+	Active:
+		MDLA A 0 A_ChangeFlag("DORMANT", FALSE)
+	Spawn:
+		MDLA A 0 NoDelay
+	Activate:
+		MDLA A -1 LIGHT(OZYSIMLT)
+		Loop
+	Inactive:
+		MDLA A 0 A_ChangeFlag("DORMANT", TRUE)
+		MDLA B -1
+		Stop
+	}
+}
+
+ACTOR COD_StationLight1A : COD_ArtDecoLight1A
+{
+	//$Title Train Station Ceiling Light (OFF, Set DORMANT & activate it via ACS)
+	States
+	{
+	Active:
+		MDLA A 0 A_ChangeFlag("DORMANT", FALSE)
+	Spawn:
+		MDLA A 0 NoDelay
+	Activate:
+		MDLA A -1
+		Loop
+	Inactive:
+		MDLA A 0 A_SpawnItemEx("VolumetricLight_ConeDown", 0, 0, ScaleX+ScaleY*1, 0, 0, 0, 0, SXF_SETMASTER | SXF_CLIENTSIDE)
+	InactiveLights:
+		MDLA A 0 A_ChangeFlag("DORMANT", TRUE)
+		MDLA A 0 A_RemoveChildren(TRUE, RMVF_MISC)
+		MDLA B -1 LIGHT(OZYSIMLT)
+		Stop
+	}
+}
+
+ACTOR COD_StationLight1B : COD_ArtDecoLight1A
+{
+	//$Title Train Station Ceiling Light (ON, Set DORMANT & activate it via ACS)
+	States
+	{
+	Active:
+		MDLA A 0 A_ChangeFlag("DORMANT", FALSE)
+	Spawn:
+		MDLA A 0 NoDelay
+	ActiveLights:
+		MDLA A 0 A_SpawnItemEx("VolumetricLight_ConeDown", 0, 0, ScaleX+ScaleY*1, 0, 0, 0, 0, SXF_SETMASTER | SXF_CLIENTSIDE)
+	Activate:
+		MDLA A 1 LIGHT(OZYSIMLT)
+		Loop
+	Inactive:
+		MDLA A 0 A_ChangeFlag("DORMANT", TRUE)
+		MDLA A 0 A_RemoveChildren(TRUE, RMVF_MISC)
+		MDLA B -1
+		Stop
+	}
+}
+
+ACTOR COD_RustyChandelier1A : COD_ArtDecoLight1A
+{
+	//$Title Rusty Chandelier (OFF, Set DORMANT & activate it via ACS)
+	States
+	{
+	Active:
+		MDLA A 0 A_ChangeFlag("DORMANT", FALSE)
+	Spawn:
+		MDLA A 0 NoDelay
+	Activate:
+		MDLA A -1
+		Loop
+	Inactive:
+		MDLA A 0 A_ChangeFlag("DORMANT", TRUE)
+		MDLA B -1 LIGHT(3DCHAN2)
+		Stop
+	}
+}
+
+ACTOR COD_RustyChandelier1B : COD_ArtDecoLight1A
+{
+	//$Title Rusty Chandelier (ON, Set DORMANT & activate it via ACS)
+	States
+	{
+	Active:
+		MDLA A 0 A_ChangeFlag("DORMANT", FALSE)
+	Spawn:
+		MDLA A 0 NoDelay
+	Activate:
+		MDLA A -1 LIGHT(3DCHAN2)
+		Loop
+	Inactive:
+		MDLA A 0 A_ChangeFlag("DORMANT", TRUE)
+		MDLA B -1
+		Stop
+	}
+}
+
 ACTOR COD_LampGlassOn : 3dGlass { DistanceCheck "scenelod" }
 ACTOR COD_LampGlassOff : 3dGlass { DistanceCheck "scenelod" }
 
@@ -2288,6 +2449,7 @@ ACTOR TMPlane : CODStuka
 {
 	//$Category Misc (Wolf3D)/Cutscenes
 	//$Title Titlemap Stuka
+	//$Color 0
 }
 
 ACTOR CODCondor : 3dObstacle
@@ -2819,23 +2981,6 @@ ACTOR SecretUFO : SwitchableDecoration //3dRealms
 	}
 }
 
-ACTOR SlopeMe1 : 3dObstacle
-{
-	//$Category Models (Wolf3D)/Special
-	//$Title Slopeable Glass (clear)
-	//$Color 3
-	DistanceCheck "scenelod"
-	Radius 16
-	Height 4
-	+NOGRAVITY
-}
-
-ACTOR SlopeMe2 : SlopeMe1
-{
-	//$Title Slopeable Glass (checker)
-	DistanceCheck "scenelod"
-}
-
 ACTOR Caesar_Museum
 {
 	//$Category Models (Wolf3D)/Statues/Special
@@ -2886,6 +3031,23 @@ ACTOR LionR_Museum : Caesar_Museum
 	DistanceCheck "scenelod"
 }
 
+ACTOR SlopeMe1 : 3dObstacle
+{
+	//$Category Models (Wolf3D)/Special
+	//$Title Slopeable Glass (clear)
+	//$Color 3
+	DistanceCheck "scenelod"
+	Radius 16
+	Height 4
+	+NOGRAVITY
+}
+
+ACTOR SlopeMe2 : SlopeMe1
+{
+	//$Title Slopeable Glass (checker)
+	DistanceCheck "scenelod"
+}
+
 // Enjay
 ACTOR Hitler_Bust : 3dObstacle
 {
@@ -2903,6 +3065,7 @@ ACTOR Toolbox3D
 {
 	//$Category Models (Wolf3D)/Scenery
 	//$Title Toolbox (3D)
+	//$Color 3
 	DistanceCheck "scenelod"
 	Radius 4
 	Height 8
@@ -2922,4 +3085,11 @@ ACTOR Spanner3D : Toolbox3D
 	DistanceCheck "scenelod"
 	Radius 2
 	Height 2
+}
+
+ACTOR PlainsSun3D : ModelBase
+{
+	//$Category Models (Wolf3D)/Special
+	//$Title Sunny Morning SkyBox (PlainsSun, Special)
+	//$Color 3
 }

@@ -346,6 +346,13 @@ PointLight 3DCHAN
 	Offset 0 32 0
 }
 
+PointLight 3DCHAN2
+{
+	Color 1.00 0.89 0.25
+	Size 48
+	Offset 0 -32 0
+}
+
 FlickerLight 3DFLARE
 {
 	Color 0.89 0.6 0.25
@@ -846,6 +853,22 @@ FlickerLight2 BOAFLMW2
 	Interval 1.7
 }
 
+FlickerLight2 ZYKFLAMW
+{
+	Color 0.15 0.95 0.65
+	Size 40
+	SecondarySize 48
+	Interval 1.7
+}
+
+FlickerLight2 ZYKFLMW2
+{
+	Color 0.15 0.95 0.65
+	Size 56
+	SecondarySize 64
+	Interval 1.7
+}
+
 PointLight NEBLIGHT
 {
 	Color 1.0 0.9 0.8
@@ -1191,6 +1214,13 @@ PointLight TOT2FIRE
 	Color 0.1 0.9 0.6
 	Size 32
 	Offset 0 24 -16
+}
+
+PointLight ZYKOFIRE
+{
+	Color 0.1 0.9 0.6
+	Size 32
+	Offset 0 24 12
 }
 
 //BloodSkull

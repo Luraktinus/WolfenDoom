@@ -286,14 +286,14 @@ map C3M4 lookup "C3M4"	//????? another Railshooter map ?????
 	cluster = 1
 }
 
-map C3M5_A lookup "C3M5_A"	//Ozymandias81
+map C3M5_A lookup "C3M5_A"	//??
 {
 	levelnum = 20
 	music = "C3M5AMUS"
 	cluster = 1
 }
 
-map C3M5_B lookup "C3M5_B"	//Ozymandias81
+map C3M5_B lookup "C3M5_B"	//??
 {
 	levelnum = 21
 	music = "C3M5BMUS"
@@ -311,6 +311,14 @@ map C3M6_B lookup "C3M6_B"	//DoomJuan
 {
 	levelnum = 23
 	music = "C3M6BMUS"
+	cluster = 1
+}
+
+map C3M0_A lookup "C3M0_A"	//Tormentor667
+{
+	
+	levelnum = 301
+	music = "C3M0AMUS"
 	cluster = 1
 }
 
@@ -494,6 +502,7 @@ DamageType Silver { ReplaceFactor } //not used yet, should be added for WereWaff
 DoomEdNums
 {
 	//12345=EnemyAlerter
+	//10779=PrisonerCampMale
 	5998=ExTeleportIfPlayerBelow
 	5999=ExTeleportIfPlayerAbove
 	6000=RepairKit
@@ -588,7 +597,6 @@ DoomEdNums
 	10732=JungleGrass4
 	10733=GrassSpawnerJungle
 	10778=PrisonerFree
-	10779=PrisonerCampMale
 	10780=PrisonerEnemyBoss
 	11001=ChestKey
 	11002=SupplyChest
@@ -729,6 +737,7 @@ DoomEdNums
 	12502=TNTBarrel2
 	12503=TNTBarrel3
 	12504=GoodieBarrel1
+	12505=PlainsSun3D
 	12699=AstroTurret
 	12700=AstroScientist
 	12701=Sniper
@@ -889,6 +898,7 @@ DoomEdNums
 	16507=Goblet
 	16508=AktenDream
 	16649=SteamSpawner
+	16650=ZyklonBSteamSpawner
 	17012=NaziBerserk
 	17013=Meal
 	17014=Medikit_Small
@@ -910,6 +920,9 @@ DoomEdNums
 	17136=Wall_CivilianMale4
 	17137=Wall_CivilianFemale1
 	17138=Wall_CivilianFemale2
+	17196=Camp_RandomBoots
+	17197=Camp_Eyeglass
+	17198=Camp_RandomEyeglass
 	17199=Camp_RandomBags
 	17200=Camp_HungSkeleton
 	17201=Camp_RandomPileDead
@@ -944,6 +957,7 @@ DoomEdNums
 	18910=ZombieKazi
 	18911=ZombieBrain
 	18912=ZombieOfficer
+	18913=ZombieZyklonstein
 	18921=SSCultist
 	18922=Zapper
 	18923=StatistSinger
@@ -1163,6 +1177,8 @@ DoomEdNums
 	19593=CafeStuff
 	19594=Debris_Vent
 	19595=Debris_Vent_FloorCeiling
+	19596=Debris_Wood2
+	//19597=Debris_Wood_FloorCeiling
 	19600=COD_OilLamp
 	19601=Chandelier4Switchable
 	19602=Chandelier3Switchable
@@ -1172,6 +1188,9 @@ DoomEdNums
 	19607=Spanner3D
 	19608=Toolbox3D
 	19762=ColumnLight2
+	19990=SkyViewpointStatic
+	19992=SkyboxDayNight
+	19993=SkyboxStars
 	19994=SkyboxEarth
 	19995=SkyboxTracerSpawner
 	19996=StarParticle_SpawnerFast
@@ -1291,6 +1310,8 @@ DoomEdNums
 	22138=COD_DestroyedTrainSnow
 	22139=COD_Tiger1
 	22140=CODNeoLights1
+	22141=COD_ArtDecoLight1A
+	22142=COD_ArtDecoLight1B
 	22144=CODRailway_Switch
 	22145=CODSignal_Light
 	22146=CODBike
@@ -1302,6 +1323,10 @@ DoomEdNums
 	22152=ModelCampBed2
 	22153=Bunk_Bed1
 	22154=Bunk_Bed2
+	22155=COD_StationLight1A
+	22156=COD_StationLight1B
+	22157=COD_RustyChandelier1A
+	22158=COD_RustyChandelier1B
 	22169=ModelBeachHedgeHog
 	22182=COD_SSHorch
 	22183=COD_WBarrel1
@@ -1449,6 +1474,8 @@ DoomEdNums
 	31735=Caesar
 	31736=King
 	31737=RTCWBench2
+	31738=ParkBench
+	31739=ParkBench2
 	31743=TrestleTable
 	31744=WallLight2
 	31745=WallLight2Lit

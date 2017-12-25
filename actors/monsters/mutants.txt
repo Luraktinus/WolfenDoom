@@ -6,6 +6,7 @@ ACTOR Mutant : MutantStandard
 {
 	//$Category Monsters (Wolf3D)/Mutants
 	//$Title Mutant (Projectile)
+	//$Color 4
 	Obituary "$MUTANT"
 	Health 90
 	+MISSILEEVENMORE
@@ -278,6 +279,7 @@ ACTOR UberMutant : Mutant
 {
 	//$Category Monsters (Wolf3D)/Bosses
 	//$Title Ubermutant (Boss)
+	//$Color 4
 	Tag "Ubermutant"
 	Health 1000
 	Radius 24

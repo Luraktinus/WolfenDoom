@@ -2952,6 +2952,30 @@ Model SkyboxPlanetLights
 	FrameIndex MDLA A 0 0
 }
 
+Model SkyboxStars
+{
+	Path "models"
+	Model 0 "planetInsideOut.md3"
+	Skin 0 "p_stars.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model SkyboxDayNight
+{
+	Path "models"
+	Model 0 "planetInsideOut.md3"
+	Skin 0 "p_daynight.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
 Model MercedesLimo
 {
 	Path "models"
@@ -3598,6 +3622,28 @@ Model Tie_Fighter //ozy
 	FrameIndex MDLA A 0 0
 }
 
+Model ParkBench
+{
+	Path "models"
+	Model 0 "pbench.md3"
+	Scale 3.0 3.0 3.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model ParkBench2
+{
+	Path "models"
+	Model 0 "sbench.md3"
+	Scale 1.7 2.0 1.5
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
 //interactive
 Model CathedralBell //ozy
 {
@@ -3976,6 +4022,16 @@ Model Toolbox3D
 	USEACTORPITCH
 	USEACTORROLL
 
+	FrameIndex MDLA A 0 0
+}
+
+Model PlainsSun3D
+{
+	Path "models"
+	Model 0 "plainssun3D.md3"
+	Scale 1.0 1.0 1.2
+	USEACTORPITCH
+	USEACTORROLL
 	FrameIndex MDLA A 0 0
 }
 
@@ -4763,6 +4819,138 @@ Model CODRailway_Switch
 	Model 1 "rail_sign.md3"
 	Skin 1 "switch_sign_wait.jpg"
 	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA B 0 0
+}
+
+Model COD_ArtDecoLight1A
+{
+	Path "models"
+	Model 0 "artdeco1_off.md3"
+	Scale 5.0 5.0 5.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model COD_ArtDecoLight1A
+{
+	Path "models"
+	Model 0 "artdeco1_on.md3"
+	Scale 5.0 5.0 5.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA B 0 0
+}
+
+Model COD_ArtDecoLight1B
+{
+	Path "models"
+	Model 0 "artdeco1_on.md3"
+	Scale 5.0 5.0 5.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model COD_ArtDecoLight1B
+{
+	Path "models"
+	Model 0 "artdeco1_off.md3"
+	Scale 5.0 5.0 5.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA B 0 0
+}
+
+Model COD_StationLight1A
+{
+	Path "models"
+	Model 0 "station1_off.md3"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model COD_StationLight1A
+{
+	Path "models"
+	Model 0 "station1_on.md3"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA B 0 0
+}
+
+Model COD_StationLight1B
+{
+	Path "models"
+	Model 0 "station1_on.md3"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model COD_StationLight1B
+{
+	Path "models"
+	Model 0 "station1_off.md3"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA B 0 0
+}
+
+Model COD_RustyChandelier1A
+{
+	Path "models"
+	Model 0 "artceil1_off.md3"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model COD_RustyChandelier1A
+{
+	Path "models"
+	Model 0 "artceil1_on.md3"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA B 0 0
+}
+
+Model COD_RustyChandelier1B
+{
+	Path "models"
+	Model 0 "artceil1_on.md3"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model COD_RustyChandelier1B
+{
+	Path "models"
+	Model 0 "artceil1_off.md3"
+	Scale 2.0 2.0 2.0
 	USEACTORPITCH
 	USEACTORROLL
 

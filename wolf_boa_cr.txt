@@ -94,10 +94,12 @@ MODELS
 		Mercedes Benz Limo (http://tf3dm.com/3d-model/mercedes-benz-limousine-56579.html),
 		Office Chair (http://tf3dm.com/3d-model/office-chair-34612.html),
 		Old Timer Car (http://tf3dm.com/3d-model/old-timer-car-51216.html),
+		Park Bench (https://free3d.com/3d-model/park-bench-73692.html),
+		Park Bench 2 (https://free3d.com/3d-model/puo-3987-16372.html),
 		Piano (http://tf3dm.com/3d-model/piano-8271.html),
 		Tractor (http://tf3dm.com/3d-model/tractor-75027.html).
 	Sink model (models\bathroomsink.md3) - converted from Medal of Honor: Allied Assault, model & texture tweaked (MaxED).
-	Talon1024 (Energy Tank Lit/Unlit [& brightmap], Feldfernschreiber, Radiator, 3d ToolBox & 3d Spanner models / skins made from scratch)
+	Talon1024 (Energy Tank Lit/Unlit [& brightmap], Feldfernschreiber, Radiator, PlainsSun Skybox, 3d ToolBox & 3d Spanner models and skins)
 	Toilet model (models\toilet.md3) - converted from Medal of Honor: Allied Assault, texture tweaked (MaxED).
 	Tree models & textures are based on Vurt's Grazeland Trees II (www.nexusmods.com/morrowind/mods/37038/),
 		Vurt's Solstheim Tree Replacer II (www.nexusmods.com/morrowind/mods/37856/),
@@ -152,7 +154,7 @@ SCRIPTS
 ----------------------------------------------------------------------------------------------------
 SOUNDS
 ----------------------------------------------------------------------------------------------------
-	3D Realms (various sounds)
+	3D Realms (various sounds from Duke Nukem 3d and Shadow Warrior)
 	ActionEffectsPro (bjfall1 & bjfall2 - from https://www.youtube.com/watch?v=rkI9Cew5aHk - converted to ogg & modified by Ozymandias81)
 	Activision (NaziLoper & Zombies sounds from Return to Castle Wolfenstein)
 	Adolf Hitler's Speeches (SPEECH1 & SPEECH2 - converted to ogg & modified by Ozymandias81) - made from:
@@ -237,9 +239,10 @@ SPRITES
 	DBJ87 (Edits for Truckgun sprite, which was from ROTT)
 	Deadwolf (Kar98k scope)
 	DoomJedi (Countless Hires sprites, AstroElite, Camp resources [Hires/Lowres], Gestapo Officer, Gory props, Laboratory props, MechaNazi Bosses, Mechanic, Radio pickup,
-				Saloon Kitty singer, Various additional Hires rotations, WereWaffenSS, all Zombies, Undead Priest, Angel Of Death, Grenadiers, Nazi Medic, hires vases,
+				Saloon Kitty singer, additional Hires rotations, WereWaffenSS, all Zombies, Undead Priest, Angel Of Death, Grenadiers, Nazi Medic, hires vases, Bloodskull,
 				Fanfare Trumpet Soldier, Adolf Hitler Cutscenes [with bits by DoomJuan], Plague Doctor, Undead Fettgesicht, Dodge frames, BJ frames, hires flags, breakable mop,
-				hires glasses, FlakJacket, DogFood variants, Static Uniforms, Ink well, Frying Pan / Cooking Pots [from Redneck Rampage then reworked], hires wall decos)
+				hires glasses, FlakJacket, DogFood variants, Static Uniforms, Ink well, Frying Pan / Cooking Pots [from Redneck Rampage then reworked], hires wall decos,
+				Zombie Zyklonstein, Camp Boots [with help from GAA1992 - https://forum.zdoom.org/viewtopic.php?f=60&t=58367#p1030716])
 	DoomJuan (Feldgrau Soldiers, Occult Skull Key [+ DoomJedi bits], SuperSoldier variants, Fanfare banner carrier [+ DoomJedi bits], several Hires bits, Gauleiter)
 	DoomNukem (Casings)
 	Enjay (Burghead Liberation)
