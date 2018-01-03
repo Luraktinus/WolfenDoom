@@ -1,20 +1,14 @@
-struct Line {
-	double A;
-	double B;
-	double C;
-	double D;
-}
 
 class WallDecoBase : Actor
 {
-	int internalLength;
-	property Length: internalLength;
+	int Width;
+	property Width: Width;
 
 	Default
 	{
 		Radius 48;
 		Height 64;
-		WallDecoBase.Length 16;
+		WallDecoBase.Width 16;
 		+FIXMAPTHINGPOS;
 		+NOGRAVITY;
 		+WALLSPRITE;
@@ -31,8 +25,14 @@ class WallDecoBase : Actor
 	// TODO: Thin rectangular prism collision
 	override bool CanCollideWith(Actor other, bool passive) {
 		if (!other) return false;
+		double Parallel1 = Angle + 90;
+		if (parallel1 > 360) parallel1 -= 360;
+		double Parallel2 = Angle - 90;
+		if (parallel1 < 0) parallel1 += 360;
+		double ParallelErr = 0.5;
 		
-		return (Distance2D(other) <= other.radius);
+		if (other.Angle == Parallel1 || other.Angle == Parallel2) return false;
+		
 		return true;
 	}
 }
