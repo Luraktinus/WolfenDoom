@@ -50,7 +50,7 @@ GRAPHICS
 	Ozymandias81 (ENDOOM screen, MOVIEHUD)
 	Peter Bark (Mugshot edits for NPCs)
 	SidDoyle (Knife weapon from Sneaky Doom)
-	Tormentor667 (LowHealth graphics, Menues, FullScreen Hud, Freeze effect...)
+	Tormentor667 (LowHealth graphics, Menues, FullScreen Hud, Freeze effect, Hires muzzleflashes...)
 	WiW (Some Hires items)
 
 ----------------------------------------------------------------------------------------------------
@@ -184,6 +184,7 @@ SOUNDS
 	Mutant see sound (mtnt_see.ogg) - made from http://freesound.org/people/reinsamba/sounds/48406/.
 	Old clock chime sound (cchime.ogg) - made from http://freesound.org/people/lonemonk/sounds/62579/
 	Old clock tick sounds (ctick1.ogg - ctick3.ogg) - made from http://freesound.org/people/urbaneguerilla/sounds/161443/
+	Rebellion Developments (sounds from Sniper Elite - NKVD soldiers & weapons)
 	Resident Evil (Swinging Doors)
 	Revo794 (Astrostein city ambience)
 	Rocket engine sound (DSMISLF.ogg) - made from http://freesound.org/people/Timbre/sounds/71023/.
@@ -242,7 +243,7 @@ SPRITES
 				Saloon Kitty singer, additional Hires rotations, WereWaffenSS, all Zombies, Undead Priest, Angel Of Death, Grenadiers, Nazi Medic, hires vases, Bloodskull,
 				Fanfare Trumpet Soldier, Adolf Hitler Cutscenes [with bits by DoomJuan], Plague Doctor, Undead Fettgesicht, Dodge frames, BJ frames, hires flags, breakable mop,
 				hires glasses, FlakJacket, DogFood variants, Static Uniforms, Ink well, Frying Pan / Cooking Pots [from Redneck Rampage then reworked], hires wall decos,
-				Zombie Zyklonstein, Camp Boots [with help from GAA1992 - https://forum.zdoom.org/viewtopic.php?f=60&t=58367#p1030716])
+				Zombie Zyklonstein, Camp Boots [with help from GAA1992 - https://forum.zdoom.org/viewtopic.php?f=60&t=58367#p1030716], NKVD Soldiers, hires Uniforms, Yevgeny, Hires keys, Kar98k pickup, Gewher41 pickup)
 	DoomJuan (Feldgrau Soldiers, Occult Skull Key [+ DoomJedi bits], SuperSoldier variants, Fanfare banner carrier [+ DoomJedi bits], several Hires bits, Gauleiter)
 	DoomNukem (Casings)
 	Enjay (Burghead Liberation)
@@ -297,6 +298,7 @@ TEXTURES
 	Enjay (Operation Overlord, Burghead Liberation)
 	FuzzballFox (Brick variations)
 	Gray Matter Interactive (Return To Castle Wolfenstein)
+	HipShot (Grimm Night skybox for Valve games)
 	iD Software (Wolfenstein 3D: Lost Episodes)
 	Ion Storm Software (Daikatana - Norse base textures)
 	Jeimuzu73 (mj79.png easteregg)

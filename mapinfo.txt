@@ -72,12 +72,22 @@ map INTROMAP lookup "INTROMAP" //Tormentor667
 	//nothing
 }
 
-map TESTMAP lookup "TESTMAP" //Ozymandias81
+map INTROMA2 lookup "INTROMA2" //DoomJuan
+{
+	//nothing
+}
+
+map INTROMA3 lookup "INTROMA3" //DoomJuan
+{
+	//nothing
+}
+
+map TEST_ACT lookup "TEST_ACT" //Ozymandias81
 {
 	music = "JUKE11"
 }
 
-map DLGTEST lookup "DLGTEST" // Talon1024
+map TEST_DLG lookup "TEST_DLG" // Talon1024
 {
 	music = "JUKE14"
 }
@@ -300,16 +310,23 @@ map C3M5_B lookup "C3M5_B"	//??
 	cluster = 1
 }
 
-map C3M6_A lookup "C3M6_A"	//DoomJuan
+map C3M5_C lookup "C3M5_C"	//Tormentor667
 {
 	levelnum = 22
-	music = "C3M6_MUS"
+	music = "C3M5CMS"
+	cluster = 1
+}
+
+map C3M6_A lookup "C3M6_A"	//DoomJuan
+{
+	levelnum = 23
+	music = "C3M6AMUS"
 	cluster = 1
 }
 
 map C3M6_B lookup "C3M6_B"	//DoomJuan
 {
-	levelnum = 23
+	levelnum = 24
 	music = "C3M6BMUS"
 	cluster = 1
 }
@@ -611,6 +628,8 @@ DoomEdNums
 	11121=DestroyedTank3
 	11122=SSTank4
 	11123=DestroyedTank4
+	11124=T34Tank
+	11125=DestroyedT34Tank
 	11333=Scorpion
 	11334=ScorpionBig
 	11499=CreepyRiftSpawner
@@ -634,6 +653,7 @@ DoomEdNums
 	11517=AlarmSpawner
 	11518=AlarmPanel
 	11519=ActorSpawner
+	11520=SnookerBall
 	11999=WMP40GuardSleep
 	12000=WereWaffenSS
 	12001=Guard
@@ -681,6 +701,11 @@ DoomEdNums
 	12044=SuperSoldier_Elsa
 	12045=SuperSoldier_Navy
 	12046=PlagueDoc1
+	12047=ROfficer
+	12048=RPPSHGuard1
+	12049=RPPSHGuard2
+	12050=RPPSHGuard3
+	12051=RDragunovGuard
 	12058=UberMutant
 	12059=MechaNaziStanding1
 	12060=MechaNaziWalking1
@@ -738,6 +763,7 @@ DoomEdNums
 	12503=TNTBarrel3
 	12504=GoodieBarrel1
 	12505=PlainsSun3D
+	12506=MountainsSun3D
 	12699=AstroTurret
 	12700=AstroScientist
 	12701=Sniper
@@ -1108,6 +1134,7 @@ DoomEdNums
 	19161=CeilingFan
 	19162=ScientistUniformStatic
 	19163=FoxUniformStatic
+	19164=HitlerUniformStatic
 	19170=SSBanner2
 	19171=SSBanner
 	19172=JungleTree1
@@ -1188,7 +1215,9 @@ DoomEdNums
 	19607=Spanner3D
 	19608=Toolbox3D
 	19762=ColumnLight2
+	19989=Mountains
 	19990=SkyViewpointStatic
+	19991=SkyViewpointAnchor
 	19992=SkyboxDayNight
 	19993=SkyboxStars
 	19994=SkyboxEarth
@@ -1251,6 +1280,7 @@ DoomEdNums
 	20076=IndianaJonesGirl
 	20077=BDDoll
 	20078=AstroLuger
+	20130=COD_OpBlitzDestroyed
 	20131=CODCondor
 	20132=Hitler_Bust
 	20133=WaterTower001
@@ -1303,6 +1333,7 @@ DoomEdNums
 	21405=VolcanoSmokeGenerator
 	21406=PowerPlantSmokeGenerator
 	21409=PowerPlantSmokeGenerator2
+	22133=CODSideCarD
 	22134=CODPTBoat
 	22135=Feldfernschreiber
 	22136=COD_DestroyedTrainPlain
@@ -1402,6 +1433,7 @@ DoomEdNums
 	25105=StatistMedic
 	25106=StatistBarkeeperMale
 	25107=StatistDarren
+	25108=StatistYevgeny
 	29395=BubbleSpawner
 	29992=PurpleSparkSpawner
 	29993=BlueSparkSpawner
@@ -1465,6 +1497,7 @@ DoomEdNums
 	31725=RTCW_V2_Rocket
 	31726=Tie_Fighter
 	31727=3dEagle
+	31728=ZeppelinBridge
 	31729=Lion_Left
 	31730=Lion_Right
 	31731=NaziBannerTallFlutter512

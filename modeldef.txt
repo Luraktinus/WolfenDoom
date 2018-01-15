@@ -4035,6 +4035,16 @@ Model PlainsSun3D
 	FrameIndex MDLA A 0 0
 }
 
+Model MountainsSun3D
+{
+	Path "models"
+	Model 0 "mountday3D.md3"
+	Scale 1.0 1.0 1.2
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
 //MoHAAs Stuff - ozy81
 Model Radar
 {
@@ -4445,6 +4455,43 @@ Model COD_USJeep_Glass
 	FrameIndex MDLA A 0 0
 }
 
+Model COD_OpBlitzDestroyed
+{
+	Path "models"
+	Model 0 "bltzdnorm1.md3"
+	Path "models"
+	Model 1 "bltzdnorm2.md3"
+	Scale 1.2 1.2 1.2
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model COD_OpBlitzDestroyed
+{
+	Path "models"
+	Model 0 "bltzdafr1.md3"
+	Path "models"
+	Model 1 "bltzdafr2.md3"
+	Scale 1.2 1.2 1.2
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA B 0 0
+}
+
+Model COD_OpBlitzD_Glass
+{
+	Path "models"
+	Model 0 "bltzdglas.md3"
+	Scale 1.2 1.2 1.2
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
 Model CODBike
 {
 	Path "models"
@@ -4643,6 +4690,17 @@ Model CODSideCar
 {
 	Path "models"
 	Model 0 "bmwbike.md3"
+	Scale 1.5 1.5 1.5
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model CODSideCarD
+{
+	Path "models"
+	Model 0 "bmwbike_d.md3"
 	Scale 1.5 1.5 1.5
 	USEACTORPITCH
 	USEACTORROLL
@@ -5243,7 +5301,7 @@ Model 3dSpeakers_4
 	FrameIndex MDLA A 0 0
 }
 
-//Special Models for sloped windows - ozy
+//Special Models for sloped surfaces - ozy
 Model SlopeMe1
 {
 	Path "models"
@@ -5261,6 +5319,18 @@ Model SlopeMe2
 	Path "models"
 	Model 0 "slopeme.md3"
 	Skin 0 "slopeme2.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model ZeppelinBridge
+{
+	Path "models"
+	Model 0 "zepbridge.md3"
+	Skin 0 "midg_gat3.png"
 	Scale 1.0 1.0 1.0
 	USEACTORPITCH
 	USEACTORROLL
@@ -5401,6 +5471,29 @@ Model TMTankPanzer3
 	Model 0 "tank_panzer3.md3"
 	Skin 0 "tank_panzer3.jpg"
 	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+//T-34 Soviet Tank
+Model T34Tank
+{
+	Path "models"
+	Model 0 "t34_g.md3"
+	Scale 1.1 1.1 1.1
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model DestroyedT34Tank
+{
+	Path "models"
+	Model 0 "t34_d.md3"
+	Scale 1.1 1.1 1.1
 	USEACTORPITCH
 	USEACTORROLL
 
@@ -6231,4 +6324,19 @@ Model BloodPool2
    Scale 15 15 15
    ZOffset 0.7
    FrameIndex SPLT F 0 0
+}
+
+Model Mountains
+{
+	USEACTORPITCH
+	USEACTORROLL
+
+	Path "models/"
+	Model 0 "mountains.md3"
+	Model 1 "mountains2.md3"
+	Model 2 "mountains3.md3"
+
+	FrameIndex MDLA A 0 0
+	FrameIndex MDLA A 1 0
+	FrameIndex MDLA A 2 0
 }

@@ -28,11 +28,13 @@ version "3.3"
 
 /// Interactive Props
 #include "scripts/actors/breakablevent.txt"			// Breakable Vent (blocking, walkable)
+#include "scripts/actors/tiltable.txt"				// Items that slide with level tilt
 #include "scripts/actors/walldeco.txt"				// Talon1024 - Wall decorations (prisoners)
 
 /// Decorative Props
 #include "scripts/actors/truckwindows.txt"
 #include "scripts/actors/invisiblebridgeblocking.txt"
+#include "scripts/actors/mountains.txt"
 
 /// Inventory
 #include "scripts/actors/items/money.txt"			// Money (can be made dormant to prevent player from picking it up)
