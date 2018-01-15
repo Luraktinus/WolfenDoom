@@ -1,16 +1,12 @@
 // WALL DECS //
-ACTOR Wall_CampMalePrisoner
+ACTOR Wall_CampMalePrisoner : WallDecoBase
 {
 	//$Category Wall Decorations (Wolf3D) /Concentration Camp
 	//$Title Camp Prisoner Hanging (male, random)
 	//$Color 3
-	Radius 1
+	Radius 64
 	Height 64
 	Scale 0.65
-	+FORCEYBILLBOARD
-	+FIXMAPTHINGPOS
-	+NOGRAVITY
-	+WALLSPRITE
 	States
 	{
 	Spawn:
@@ -25,7 +21,7 @@ ACTOR Wall_CampMalePrisoner
 		CHGM K -1
 		Stop
 	Moving:
-		CHGM B 1 A_SetTics(Random(80,160))
+		"####" B 1 A_SetTics(Random(80,160))
 		"####" C 8
 		"####" D 8
 		"####" C 8

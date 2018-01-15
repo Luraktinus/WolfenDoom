@@ -15,6 +15,7 @@ class WallDecoBase : Actor
 		+WALLSPRITE;
 		+SHOOTABLE;
 		+NOTAUTOAIMED;
+		+SOLID;
 	}
 	States
 	{
