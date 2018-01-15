@@ -1,3 +1,4 @@
+// kate: syntax C#;
 
 class WallDecoBase : Actor
 {
@@ -22,17 +23,54 @@ class WallDecoBase : Actor
 		Stop;
 	}
 
-	// TODO: Thin rectangular prism collision
 	override bool CanCollideWith(Actor other, bool passive) {
+
 		if (!other) return false;
+
+		// Disregard other actors that are parallel to this actor's tangent line
 		double Parallel1 = Angle + 90;
 		if (parallel1 > 360) parallel1 -= 360;
 		double Parallel2 = Angle - 90;
 		if (parallel1 < 0) parallel1 += 360;
 		double ParallelErr = 0.5;
-		
+
 		if (other.Angle == Parallel1 || other.Angle == Parallel2) return false;
-		
-		return true;
+
+		// Is the tangent line vertical?
+		bool Vertical = false;
+		if (Angle == 0.0 || Angle == 180.0) vertical = true;
+		if (Vertical) {
+			double tangentX = Pos.X;
+			// Move collision point forward by Width
+			if (Angle == 0.0) {
+				tangentX += Width;
+				if (other.Pos.X < tangentX) return true;
+			} else {
+				tangentX -= Width;
+				if (other.Pos.X > tangentX) return true;
+			}
+		} else {
+			bool up = Angle <= 180;
+			double m = tan(Angle);
+			double b = Pos.Y;
+
+			// Distance between two lines of form y = mx + b
+			// d = abs(b2 - b1) / sqrt(m*m + 1)
+			// Find b2
+			// d * sqrt(m*m + 1) = abs(b2 - b1)
+			// d * sqrt(m*m + 1) + abs(b1) = abs(b2)
+			// abs(b2) = d * sqrt(m*m + 1) + abs(b1)
+			// b2 = d * sqrt(m*m + 1) + b1
+
+			b += Width * sqrt(m*m + 1) * up ? 1 : -1;
+
+			double y = m * other.Pos.X + b;
+			if (up) {
+				if (other.Pos.Y - y <= 0) return true;
+			} else {
+				if (y - other.Pos.Y <= 0) return true;
+			}
+		}
+		return false;
 	}
 }
